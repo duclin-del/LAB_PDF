@@ -413,8 +413,8 @@
       "description": "【範例 1, 4, 5, 6 整合】適合 Excel、Outlook、網頁自動化，強調簡單、完整程式碼與錯誤處理。",
       "template": "# Role (角色設定)\n你是一位 Python 辦公室自動化專家與教學導師。你的程式碼風格簡潔、高效，並且適合初學者閱讀。\n\n# Context (背景情境)\n我需要處理日常繁瑣的文書工作，希望透過 Python 腳本來自動化處理。我的 Python 版本是 3.13.5。\n\n# Task (任務目標)\n請撰寫一個 Python 腳本，功能是：\n{task}\n\n# Constraints & Requirements (限制與要求)\n1. 使用適合新手的標準函式庫 (如 pandas, openpyxl, os, shutil, pywin32 等)。\n2. **包含偵測與修改在內，每次均提供完整的程式碼 (Full Code)**，不要省略。\n3. 程式碼必須包含詳細的繁體中文註解 (解釋每一段在做什麼)。\n4. 加入簡單的錯誤處理 (try-except)，例如找不到檔案時顯示提示。\n5. 若涉及網頁，請完全依照範例接續步驟；若涉及 Outlook，請使用 pywin32。\n\n# Input/Output Details (輸入與輸出細節)\n{details}",
       "vars": {
-        "task": "例如：讀取 D:\\Data\\Sales.xlsx，將 '金額' 欄位大於 1000 的資料篩選出來，並透過 Outlook 寄送給 manager@test.com",
-        "details": "例如：輸入檔案在 D:\\Downloads，輸出檔案請存到 D:\\Report"
+        "task任務": "例如：讀取 D:\\Data\\Sales.xlsx，將 '金額' 欄位大於 1000 的資料篩選出來，並透過 Outlook 寄送給 manager@test.com",
+        "details細節": "例如：輸入檔案在 D:\\Downloads，輸出檔案請存到 D:\\Report"
       }
     },
     "🛡️ 專業架構/PAD 轉 Python (Pro & PAD Conversion)": {
@@ -9783,6 +9783,15 @@
       "template": "我要在 Instagram 發布 {dessert} 的新品貼文。\n\n請幫我寫：\n1. 一個引人注目的開頭 (Hook)。\n2. 描述製作過程的辛苦或堅持 (Behind the scenes)。\n3. 結尾引導粉絲留言 (CTA)。\n4. 5 個高流量的 Hashtag。",
       "vars": {
         "dessert": "爆漿流心巴斯克乳酪蛋糕"
+      }
+    }
+  },
+  "🧠 國彥的AI小筆記 (duc's AI Notebook)": {
+    "簡報風格提煉提示詞 (Distilling Presentation Style)": {
+      "description": "分析既有簡報並萃取可重複使用的設計 DNA Prompt",
+      "template": "請將以下文字連同 1–3 張簡報截圖或舊講義提供給 AI。\n\n你是一位專業的簡報視覺分析師。請分析我提供的圖片或內容，逆向還原出我的「簡報設計 DNA」，並整理成一段能讓 AI（如 Manus、NotebookLM）直接執行的指令。\n\n請重點分析並定義以下六點：\n1. 配色方案：提供主色、輔助色、背景色的 Hex Code 及其搭配邏輯。\n2. 視覺風格：給出精準的風格關鍵字（如：極簡、科技感、手繪風、雜誌排版）。\n3. 敘事結構：分析資訊呈現邏輯（如：結論先行、SCQA、圖表導向）。\n4. 版型偏好：描述圖文比例、留白程度與對齊方式。\n5. 敘事語氣：定義文字風格（如：專業冷靜、親切口語、條列式）。\n6. 追加限制：依使用者需求加入特殊規範。\n\n最終產出：請生成一段約 200 字、整合上述所有特徵的「簡報生成 Prompt」，讓我下次可以直接貼給 AI 製作同風格簡報。\n\n追加限制：{constraints}",
+      "vars": {
+        "constraints": "（由使用者自行輸入，例如：16:9 商務風、單頁不超過 40 字、符合品牌色等）"
       }
     }
   }
